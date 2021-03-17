@@ -12,11 +12,12 @@
 	<!--V elipse spí lev-->
 	<div class = "paragraph">
 		<p id="js-paragraph" 
-		onmouseover="ztucni(event)" 
-		onmouseout="this.style.fontWeight = 'normal'"
+		onmouseover="ztucni()" 
+		onmouseout="paragraph.style.fontWeight = 'normal'"
 		style = "font-size: 16px">V elipse spí lev</p>
 
 		<button id="redbutton" onclick="CervenaBarva()" >Červený po kliknutí</button>
+
 		<button id="enlarge-text" onclick="ZvetsitText()" >Zvětšit text</button>
 	</div>
 
@@ -27,7 +28,11 @@
 	<audio id="js-audio" src="audio/dingdingdang.mp3" preload="auto"></audio>
 	<button onclick="prehraj('#js-audio')">Přehraj písničku</button>
 	<button onclick="zastav('#js-audio')">Zastav písničku</button>
-
+	<button onclick="tichy('#js-audio')">Nastav zvuk na minimum</button>
+	<button onclick="prumer('#js-audio')">Nastav zvuk na střed</button>
+	<button onclick="hlasity('#js-audio')">Nastav zvuk na maximum</button>
+	<button onclick="zacatek('#js-audio')">Vrať na začátek</button>
+	
 	<script src="main.js"></script>
 </body>
 </html>

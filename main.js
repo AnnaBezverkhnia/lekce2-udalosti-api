@@ -1,20 +1,24 @@
 
 let paragraph = document.getElementById("js-paragraph");
 
-// text odstavce se obarví dp červená:
+// Text odstavce se obarví do červená:
 
 function CervenaBarva() {
 paragraph.classList.toggle("cerveny");
 }
 
-// tučný text odstavce při najetí myší:
+// Tučný text odstavce při najetí myší:
 
-function ztucni(udalost) {
+/**function ztucni(udalost) {
     console.log(udalost);
     udalost.target.style.fontWeight = "bold";   
+}*/
+
+function ztucni() {
+    paragraph.style.fontWeight = 'bold';
 }
 
-// tlačitko pro zvětšení textu odstavce:
+// Tlačitko pro zvětšení textu odstavce:
 
 function ZvetsitText() {
     
@@ -25,13 +29,29 @@ function ZvetsitText() {
    
 }
 
+// Audio Player:
+let audioElement = document.querySelector('#js-audio');
 
 function prehraj(elementSelector) {
-    let audioElement = document.querySelector(elementSelector);
     audioElement.play();
 }
+
 function zastav(elementSelector) {
-    let audioElement = document.querySelector(elementSelector);
     audioElement.pause();
 }
 
+function tichy(elementSelector) {
+    audioElement.volume = 0;
+}
+
+function prumer(elementSelector) {
+    audioElement.volume = 0.5;
+}
+
+function hlasity(elementSelector) {
+    audioElement.volume = 1;
+}
+
+function zacatek(elementSelector) {
+    audioElement.currentTime = 0;
+}
