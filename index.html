@@ -9,26 +9,24 @@
 </head>
 <body>
 
-	<h1>Změna tříd, události</h1>
+	<!--V elipse spí lev-->
+	<div class = "paragraph">
+		<p id="js-paragraph" 
+		onmouseover="ztucni(event)" 
+		onmouseout="this.style.fontWeight = 'normal'"
+		style = "font-size: 16px">V elipse spí lev</p>
 
-	<div class="ctverecek zluty" onmouseover="secti(9,4)">
-
+		<button id="redbutton" onclick="CervenaBarva()" >Červený po kliknutí</button>
+		<button id="enlarge-text" onclick="ZvetsitText()" >Zvětšit text</button>
 	</div>
 
-	<div class="ctverecek zeleny" onkeydown="console.log(event)"></div>
-	
-	
-	<p class="Odstavec" onmouseover="ztucni"()>V elipse spí lev</p>
-	<button>Červený po kliknutí</button>
-	
+	<!--Audio reproduktor-->
 
+	<p id="reproduktor">Audio Player</p>
 
-	<img class="obrazek" src="obrazky/kocka.jpg">
-
-
-	<button class="tlacitko">Čudlajs</button>
-
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
+	<audio id="js-audio" src="audio/dingdingdang.mp3" preload="auto"></audio>
+	<button onclick="prehraj('#js-audio')">Přehraj písničku</button>
+	<button onclick="zastav('#js-audio')">Zastav písničku</button>
 
 	<script src="main.js"></script>
 </body>

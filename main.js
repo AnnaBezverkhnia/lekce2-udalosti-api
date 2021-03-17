@@ -1,14 +1,37 @@
-// tady je místo pro náš program
 
-let nadpis = document.querySelector("h1");
-nadpis.classList.add("zluty");
-nadpis.classList.remove("zluty");
-nadpis.classList.toggle("zluty");
+let paragraph = document.getElementById("js-paragraph");
 
-function secti(a,b) {
-    console.log(a + b)
+// text odstavce se obarví dp červená:
+
+function CervenaBarva() {
+paragraph.classList.toggle("cerveny");
 }
 
-function ztucni() {
-    document.querySelector(".odstavec").style.fontWeight = "bold";
+// tučný text odstavce při najetí myší:
+
+function ztucni(udalost) {
+    console.log(udalost);
+    udalost.target.style.fontWeight = "bold";   
 }
+
+// tlačitko pro zvětšení textu odstavce:
+
+function ZvetsitText() {
+    
+    let style = window.getComputedStyle(paragraph, null).getPropertyValue('font-size');
+    let currentSize = parseFloat(style);
+    console.log(currentSize);
+    paragraph.style.fontSize = (currentSize + 1) + "px";
+   
+}
+
+
+function prehraj(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.play();
+}
+function zastav(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.pause();
+}
+
